@@ -73,3 +73,39 @@ type Query {
   }
 }
 ```
+
+## Sample Mutations
+
+**Create a todo**
+
+```
+mutation {
+  addTodo(name:"Submit this final") {
+    id
+    name
+    date
+    completed
+  }
+}
+```
+
+**Complete a todo**
+
+```
+mutation {
+  completeTodo(id: 5) {
+    id
+    name
+    date
+    completed
+  }
+}
+```
+
+**Delete a todo**
+
+```
+mutation {
+  deleteTodo(id: 5)
+}
+```
